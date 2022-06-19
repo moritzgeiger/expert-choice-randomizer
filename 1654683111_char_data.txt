@@ -1,0 +1,25 @@
+	set	Alt A	Alt B	resp
+Price	1	$5	$1	Alt A
+Time	1	12 min	20 min	Alt A
+Comfort	1	bad	average	Alt A
+Price	2	$10	$5	Alt B
+Time	2	20 min	12 min	Alt B
+Comfort	2	average	bad	Alt B
+Price	3	$1	$10	Alt B
+Time	3	20 min	3 min	Alt B
+Comfort	3	good	bad	Alt B
+Price	4	$1	$5	Alt B
+Time	4	20 min	12 min	Alt B
+Comfort	4	bad	average	Alt B
+Price	5	$10	$1	Alt B
+Time	5	3 min	3 min	Alt B
+Comfort	5	good	bad	Alt B
+Price	6	$5	$1	Alt B
+Time	6	3 min	12 min	Alt B
+Comfort	6	average	bad	Alt B
+Price	7	$10	$5	Alt A
+Time	7	12 min	20 min	Alt A
+Comfort	7	good	average	Alt A
+Price	1	$1	$5	Alt A
+Time	1	12 min	3 min	Alt A
+Comfort	1	average	good	Alt A
