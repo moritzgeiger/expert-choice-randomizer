@@ -86,7 +86,15 @@ def create_ad(
 
 
 def parse_csv(csv_path, dest_folder):
-    
+    """parses csv file with columns like: 
+    question,choice,levels,price1,price2,price3,grape1,grape2,grape3,seal1,seal2,label1,label2,label3,NoChoice
+
+    Creates a custom image for each row of the file according to the csv contents. 
+
+    Args:
+        csv_path (_type_): the path to the csv file
+        dest_folder (_type_): the subfolder path where to store the images. 
+    """
     df = pd.read_csv(csv_path, sep=',')
     df_clean = df[df['NoChoice'] == 0]
     choices = {}
