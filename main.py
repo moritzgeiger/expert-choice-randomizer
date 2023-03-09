@@ -17,6 +17,7 @@ class BgImages:
     capsule = "image/bg/Kapsel.png"
     tag = "image/bg/Preisschild.png"
     canvas = "image/bg/Blanko_Rückeneti.png"
+    brand = "image/bg/Brand.png"
     
 IMG_SUBFOLDER = 'image'
 CSV_COLS = [
@@ -58,9 +59,9 @@ def create_ad(
         capsule = Image.open(BgImages.capsule, formats=['PNG'])
         tag = Image.open(BgImages.tag, formats=['PNG'])
         canvas = Image.open(BgImages.canvas, formats=['PNG'])
+        brand = Image.open(BgImages.brand, formats=['PNG']).convert("RGBA")
 
         _label = Image.open(os.path.join(IMG_SUBFOLDER, label), formats=['PNG']).convert("RGBA")
-#         _name = Image.open(os.path.join(IMG_SUBFOLDER, name), formats=['PNG']).convert("RGBA")
         _text = Image.open(os.path.join(IMG_SUBFOLDER, text), formats=['PNG']).convert("RGBA")
         _variety = Image.open(os.path.join(IMG_SUBFOLDER, variety), formats=['PNG']).convert("RGBA")
         _price = Image.open(os.path.join(IMG_SUBFOLDER, price), formats=['PNG']).convert("RGBA")
@@ -71,11 +72,11 @@ def create_ad(
         background.paste(tag, (300,30), tag)
         background.paste(capsule, (167,18), capsule)
         background.paste(canvas, (BgConfig.width-1079-35, BgConfig.height-1075-30), canvas)
+        background.paste(brand, (665,600), brand)
         
         # variable content
         background.paste(_seal, (140,700), _seal)
         background.paste(_label, (30,1030), _label)
-#         background.paste(_name, (665,600), _name)
         background.paste(_text, (560,930), _text)
         background.paste(_variety, (820,790), _variety)
         background.paste(_price, (800, 160), _price)
